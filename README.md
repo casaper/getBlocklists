@@ -7,7 +7,7 @@ But as I stumbeled opon it cleaning out my desktop, I thought it would be fair t
 ## Features:
 - Grabs all free blocklist on iblocklist.com
 - Combines them into one file
-- removes obvious duplicates (very simple with )
+- removes obvious duplicates (*very rough, only with uniq*)
 - Installs it to Transmission Config
 
-It's not tested at all, but this thing sould posibly be runnable on linux too.
+*It's not tested at all, but this thing sould posibly be runnable on linux too.*
