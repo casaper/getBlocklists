@@ -13,7 +13,7 @@ fi
 # grab the lists uris from the website
 BLOCKLIST_SOURCE_URL="$(curl -s https://www.iblocklist.com/lists.php | grep -o -e "http://list.iblocklist.com/[a-zA-Z\?\=;&0-9]*" | tr '\n' ' ')"
 # grab the lists
-for i $BLOCKLIST_SOURCE_URL; do
+for i in $BLOCKLIST_SOURCE_URL; do
     LISTNAME=$(echo $i | grep -o -E "list=[a-z]*" | grep -o -E "[a-z]*$") # list temp filename from uri
     curl "$i" > "${LISTS_DIR}/${LISTNAME}.gz"                             # download the list
     gunzip "${LISTS_DIR}/${LISTNAME}.gz"                                  # unpack the list
